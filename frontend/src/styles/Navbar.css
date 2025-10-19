@@ -1,0 +1,277 @@
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #2e2a2a;
+  height: 70px;
+  padding: 0 90px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.navbar h3 {
+  margin: 0;
+  font-size: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: #111827;
+}
+
+.user-email {
+  font-size: 16px;
+  color: #111827;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.navbar button {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 42px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .navbar-right {
+    margin-top: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .user-email {
+    max-width: 150px;
+  }
+} */
+
+/* ============================= */
+/* Base Navbar Styles (Desktop + Laptop) */
+/* ============================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #2e2a2a;
+  padding: 10px 25px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  z-index: 1000;
+  gap: 10px;
+  flex-wrap: wrap; /* allow wrapping only when absolutely necessary */
+}
+
+.navbar h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 120px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 200px;
+  text-align: right;
+}
+
+.profile-icon {
+  font-size: 22px;
+  color: #111827;
+  flex-shrink: 0;
+}
+
+.user-email {
+  font-size: 15px;
+  color: #111827;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.navbar button {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navbar button:hover {
+  background-color: #f2f2f2;
+}
+
+/* ============================= */
+/* Fix content below navbar */
+/* ============================= */
+body {
+  margin: 0;
+}
+
+.dashboard,
+main,
+.app-content {
+  padding-top: 70px; /* ensures dashboard never hides */
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* Tablet (Below 992px) */
+/* ============================= */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar h3 {
+    font-size: 20px;
+  }
+
+  .user-email {
+    max-width: 150px;
+  }
+
+  .navbar button {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+}
+
+/* ============================= */
+/* Mobile Landscape (Below 775px) */
+/* ============================= */
+@media (max-width: 775px) {
+  .navbar {
+    padding: 8px 15px;
+    justify-content: space-between;
+  }
+
+  .navbar h3 {
+    font-size: 18px;
+    flex: 1;
+  }
+
+  .navbar-right {
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .user-email {
+    font-size: 13px;
+    max-width: 120px;
+  }
+
+  .navbar button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* ============================= */
+/* Mobile Portrait (Below 600px) */
+/* ============================= */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .navbar h3 {
+    font-size: 17px;
+  }
+
+  .navbar-right {
+    gap: 6px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  .profile-icon {
+    font-size: 20px;
+  }
+
+  .user-email {
+    font-size: 12px;
+    max-width: 90px;
+  }
+
+  .navbar button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* ============================= */
+/* Tiny Devices (Below 400px) */
+/* ============================= */
+@media (max-width: 400px) {
+  .navbar {
+    padding: 6px 10px;
+  }
+
+  .navbar h3 {
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 5px;
+  }
+
+  .user-email {
+    font-size: 11px;
+    max-width: 80px;
+  }
+
+  .navbar button {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .profile-icon {
+    font-size: 18px;
+  }
+}
+

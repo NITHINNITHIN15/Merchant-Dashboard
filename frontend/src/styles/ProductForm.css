@@ -1,0 +1,127 @@
+/* .product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-form input {
+  flex: 1 1 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.product-form button {
+  background-color: #211f1f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-form button:hover {
+  background-color: #45505f;
+}
+
+.product-form input[type=number]::-webkit-outer-spin-button,
+.product-form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product-form input[type=number] {
+  -moz-appearance: textfield;
+} */
+
+
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  justify-content: space-between;
+}
+
+/* Input styling */
+.product-form input {
+  flex: 1 1 200px; /* grows, shrinks, base width */
+  min-width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.product-form button {
+  background-color: #211f1f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1 1 100px;
+  min-width: 120px;
+  align-self: flex-end;
+}
+
+.product-form button:hover {
+  background-color: #45505f;
+}
+
+/* Remove number input spinners */
+.product-form input[type=number]::-webkit-outer-spin-button,
+.product-form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product-form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .product-form {
+    padding: 15px;
+    gap: 10px;
+  }
+  .product-form input {
+    flex: 1 1 100%;
+    padding: 8px;
+  }
+  .product-form button {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .product-form {
+    padding: 10px;
+    gap: 8px;
+  }
+  .product-form input {
+    flex: 1 1 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+  .product-form button {
+    flex: 1 1 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}

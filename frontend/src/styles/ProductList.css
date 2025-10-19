@@ -1,0 +1,232 @@
+/* .product-list {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.product-list-container {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.product-list-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e2a2a;
+  margin-bottom: 20px;
+  text-align: left;
+  border-bottom: 2px solid #111827;
+  display: inline-block;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+   text-decoration: none;
+  border-bottom: none;
+}
+
+.product-list th, .product-list td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.product-list thead tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.product-list th {
+  background-color: #ffffff;
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #5b5b5b;
+  text-transform: uppercase;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #e3e3e3;
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.product-list button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.product-list button:hover {
+  transform: scale(1.1);
+}
+
+.edit-btn {
+  color: #6e6e6e;
+}
+
+.edit-btn:hover {
+  color: #424242;
+}
+
+.delete-btn {
+  color: #6e6e6e;
+}
+
+.delete-btn:hover {
+  color: #424242;
+}
+
+ */
+
+
+ .product-list-container {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  overflow-x: auto; /* Allows horizontal scroll on small screens */
+}
+
+.product-list-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e2a2a;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.product-list {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 600px; /* Ensures table doesn't shrink too much */
+}
+
+.product-list th, .product-list td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.product-list thead tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.product-list th {
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  color: #5b5b5b;
+  text-transform: uppercase;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #e3e3e3;
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.product-list button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.product-list button:hover {
+  transform: scale(1.1);
+}
+
+.edit-btn {
+  color: #6e6e6e;
+}
+
+.edit-btn:hover {
+  color: #424242;
+}
+
+.delete-btn {
+  color: #6e6e6e;
+}
+
+.delete-btn:hover {
+  color: #424242;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+/* For tablets and below */
+@media (max-width: 1024px) {
+  .product-list-container {
+    padding: 20px;
+  }
+  .product-list-title {
+    font-size: 18px;
+  }
+  .product-list th, .product-list td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .product-list {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .product-list th, .product-list td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .category-badge {
+    padding: 3px 7px;
+    font-size: 11px;
+  }
+  .product-list button {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  .product-list-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .product-list th, .product-list td {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+  .category-badge {
+    padding: 2px 5px;
+    font-size: 10px;
+  }
+  .product-list button {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+}
